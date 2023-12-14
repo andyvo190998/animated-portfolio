@@ -30,7 +30,7 @@ const Contact = () => {
     const serviceId = import.meta.env.VITE_EMAILJS_SERVICE_ID;
     const receivedEmail = import.meta.env.VITE_RECEIVED_EMAIL;
     const receivedName = import.meta.env.VITE_RECEIVED_NAME;
-    console.log(`publicKey: ${publicKey}`);
+
     emailjs
       .send(
         serviceId,
