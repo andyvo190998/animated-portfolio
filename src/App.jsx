@@ -12,6 +12,9 @@ import {
 import Education from './components/Education';
 
 const App = () => {
+  const publicKey = import.meta.env.VITE_EMAILJS_PUBLIC_KEY;
+  console.log('here');
+  console.log(`publicKey: ${publicKey}`);
   return (
     <BrowserRouter>
       <div className="relative z-0 bg-primary">
