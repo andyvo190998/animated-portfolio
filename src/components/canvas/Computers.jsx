@@ -7,7 +7,8 @@ import CanvasLoader from '../Loader';
 
 // eslint-disable-next-line react/prop-types
 const Computers = ({ isMobile }) => {
-  const computer = useGLTF('./animated-portfolio/desktop_pc/scene.gltf');
+  const computer = useGLTF('./desktop_pc/scene.gltf');
+  // const computer = useGLTF('./3d-portfolio/desktop_pc/scene.gltf');
   return (
     <mesh>
       {/* <hemisphereLight intensity={0.15} groundColor="black" /> */}
