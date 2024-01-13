@@ -225,11 +225,11 @@ const projects = [
             "Web-based platform that allows users to search, book, and manage car rentals from various providers, providing a convenient and efficient solution for transportation needs.",
         tags: [
             {
-                name: "react",
+                name: "NextJS",
                 color: "blue-text-gradient",
             },
             {
-                name: "mongodb",
+                name: "Typescript",
                 color: "green-text-gradient",
             },
             {
@@ -238,10 +238,11 @@ const projects = [
             },
         ],
         image: carrent,
-        source_code_link: "https://github.com/",
+        source_code_link: "https://github.com/andyvo190998/car-rental",
+        deployment_link: ''
     },
     {
-        name: "Job IT",
+        name: "Compound Interest Calculator",
         description:
             "Web application that enables users to search for job openings, view estimated salary ranges for positions, and locate available jobs based on their current location.",
         tags: [
@@ -250,37 +251,61 @@ const projects = [
                 color: "blue-text-gradient",
             },
             {
-                name: "restapi",
+                name: "Typescript",
                 color: "green-text-gradient",
             },
             {
-                name: "scss",
+                name: "Vite",
                 color: "pink-text-gradient",
             },
         ],
         image: jobit,
-        source_code_link: "https://github.com/",
+        source_code_link: "https://github.com/andyvo190998/compound-interest-calculator",
+        deployment_link: ''
     },
     {
-        name: "Trip Guide",
+        name: "Pomodoro Timer",
         description:
             "A comprehensive travel booking platform that allows users to book flights, hotels, and rental cars, and offers curated recommendations for popular destinations.",
         tags: [
             {
-                name: "nextjs",
+                name: "NextJS",
                 color: "blue-text-gradient",
             },
             {
-                name: "supabase",
+                name: "JWT authentication",
                 color: "green-text-gradient",
             },
             {
-                name: "css",
+                name: "Material UI",
                 color: "pink-text-gradient",
             },
         ],
         image: tripguide,
         source_code_link: "https://github.com/",
+        deployment_link: ''
+    },
+    {
+        name: "Fancy Restaurant",
+        description:
+            "A comprehensive travel booking platform that allows users to book flights, hotels, and rental cars, and offers curated recommendations for popular destinations.",
+        tags: [
+            {
+                name: "React",
+                color: "blue-text-gradient",
+            },
+            {
+                name: "Responsive",
+                color: "green-text-gradient",
+            },
+            {
+                name: "Modern Design",
+                color: "pink-text-gradient",
+            },
+        ],
+        image: tripguide,
+        source_code_link: "https://github.com/andyvo190998/restaurant",
+        deployment_link: 'https://andyvo190998.github.io/restaurant/'
     },
 ];
 
