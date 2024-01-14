@@ -16,14 +16,15 @@ import {
     figma,
     docker,
     carrent,
-    jobit,
-    tripguide,
+    compoundInterestCalculator,
     threejs,
     ute,
     una,
     solarBk,
     fullerton,
-    kiutra
+    kiutra,
+    pomodoroTimer,
+    fancyRestaurant
 } from "../assets";
 
 export const navLinks = [
@@ -38,6 +39,10 @@ export const navLinks = [
     {
         id: "educations",
         title: "Educations",
+    },
+    {
+        id: "projects",
+        title: "Projects",
     },
     {
         id: "contact",
@@ -239,12 +244,34 @@ const projects = [
         ],
         image: carrent,
         source_code_link: "https://github.com/andyvo190998/car-rental",
-        deployment_link: ''
+        deployment_link: 'https://car-rental-eight-mu.vercel.app/?manufacturer=volkswagen'
+    },
+    {
+        name: "Lamda Blog",
+        description:
+            "Full stack social media website to allow users to create account, post, edit, update posts",
+        tags: [
+            {
+                name: "ReactJS",
+                color: "blue-text-gradient",
+            },
+            {
+                name: "NodeJS",
+                color: "green-text-gradient",
+            },
+            {
+                name: "Mysql",
+                color: "pink-text-gradient",
+            },
+        ],
+        image: compoundInterestCalculator,
+        source_code_link: "https://github.com/andyvo190998/compound-interest-calculator",
+        deployment_link: 'https://andyvo190998.github.io/compound-interest-calculator/'
     },
     {
         name: "Compound Interest Calculator",
         description:
-            "Web application that enables users to search for job openings, view estimated salary ranges for positions, and locate available jobs based on their current location.",
+            "Web application that helps users to calculate compound interest rate (the 8th World Wonder according to Einstein.",
         tags: [
             {
                 name: "react",
@@ -259,9 +286,9 @@ const projects = [
                 color: "pink-text-gradient",
             },
         ],
-        image: jobit,
+        image: compoundInterestCalculator,
         source_code_link: "https://github.com/andyvo190998/compound-interest-calculator",
-        deployment_link: ''
+        deployment_link: 'https://andyvo190998.github.io/compound-interest-calculator/'
     },
     {
         name: "Pomodoro Timer",
@@ -281,14 +308,13 @@ const projects = [
                 color: "pink-text-gradient",
             },
         ],
-        image: tripguide,
-        source_code_link: "https://github.com/",
-        deployment_link: ''
+        image: pomodoroTimer,
+        source_code_link: "https://github.com/andyvo190998/pomodoro-timmer",
+        deployment_link: 'https://pomodoro-timmer.vercel.app/'
     },
     {
         name: "Fancy Restaurant",
-        description:
-            "A comprehensive travel booking platform that allows users to book flights, hotels, and rental cars, and offers curated recommendations for popular destinations.",
+        description: "A responsive and fancy front-end web site for a restaurant. This includes the menu, images, videos of the restaurant and also the contact.",
         tags: [
             {
                 name: "React",
@@ -303,7 +329,7 @@ const projects = [
                 color: "pink-text-gradient",
             },
         ],
-        image: tripguide,
+        image: fancyRestaurant,
         source_code_link: "https://github.com/andyvo190998/restaurant",
         deployment_link: 'https://andyvo190998.github.io/restaurant/'
     },

@@ -26,9 +26,12 @@ import shopify from "./company/shopify.png";
 import starbucks from "./company/starbucks.png";
 import tesla from "./company/tesla.png";
 
-import carrent from "./carrent.png";
+import carrent from "./carrent1.png";
 import jobit from "./jobit.png";
 import tripguide from "./tripguide.png";
+import pomodoroTimer from "./pomodoro-timer.png";
+import fancyRestaurant from "./fancy-restaurant.png";
+import compoundInterestCalculator from './compound-interest-calculator.png'
 
 import ute from './spkt-logo.webp'
 import una from './uni-augsburg-logo.png'
@@ -70,5 +73,8 @@ export {
   una,
   solarBk,
   kiutra,
-  fullerton
+  fullerton,
+  pomodoroTimer,
+  fancyRestaurant,
+  compoundInterestCalculator
 };
