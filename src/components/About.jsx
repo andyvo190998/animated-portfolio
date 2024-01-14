@@ -37,7 +37,8 @@ const ServiceCard = ({ index, title, icon }) => {
 
 const About = () => {
   const handleDownloadCv = () => {
-    const pdfUrl = 'src/assets/andy-cv-1.pdf';
+    // const pdfUrl = 'src/assets/andy-cv-1.pdf';
+    const pdfUrl = 'public/resumei/andy-cv-1.pdf';
     const link = document.createElement('a');
     console.log(link);
     link.href = pdfUrl;
@@ -73,7 +74,7 @@ const About = () => {
             <b>From:</b> Ho Chi Minh city, VietNam
           </li>
           <li className="contact__item">
-            <b>Lives In:</b> Franzensbad 4, 86199 Augsburg, Germany
+            <b>Lives In:</b> Friedberger 5, 86161 Augsburg, Germany
           </li>
           <li className="contact__item">
             <b>Age:</b> 25
