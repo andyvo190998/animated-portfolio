@@ -89,13 +89,15 @@ const About = () => {
           </li>
         </ul>
 
-        <button
-          onClick={() => handleDownloadCv()}
+        <a
+          href="public/resumei/andy-cv-1.pdf"
+          download="Andy-Vo-CV.pdf"
+          // onClick={() => handleDownloadCv()}
           // className="bg-[#915eff] mt-5 py-3 px-8 font-bold shadow-md shadow-primary outline-none rounded-xl w-fit"
           className="bg-[#151030] hover:bg-inherit border-[1px] border-rose-50 mt-5 py-3 px-8 font-bold shadow-md shadow-primary outline-none rounded-xl w-fit"
         >
           Download Résumé
-        </button>
+        </a>
       </motion.div>
 
       <div className="mt-20 flex flex-wrap gap-10">

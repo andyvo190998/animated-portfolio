@@ -231,6 +231,7 @@ canvas {
   padding-left: 30px;
   list-style: none;
   z-index: 10;
+  margin-bottom: 20px;
 }
 
 .overview__basic-contact::before {
