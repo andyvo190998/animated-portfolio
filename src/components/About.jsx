@@ -36,17 +36,17 @@ const ServiceCard = ({ index, title, icon }) => {
 };
 
 const About = () => {
-  const handleDownloadCv = () => {
-    // const pdfUrl = 'src/assets/andy-cv-1.pdf';
-    const pdfUrl = 'public/resumei/andy-cv-1.pdf';
-    const link = document.createElement('a');
-    console.log(link);
-    link.href = pdfUrl;
-    link.download = 'Andy-Vo-CV.pdf';
-    document.body.appendChild(link);
-    link.click();
-    document.body.removeChild(link);
-  };
+  // const handleDownloadCv = () => {
+  //   // const pdfUrl = 'src/assets/andy-cv-1.pdf';
+  //   const pdfUrl = 'public/resumei/andy-cv-1.pdf';
+  //   const link = document.createElement('a');
+  //   console.log(link);
+  //   link.href = pdfUrl;
+  //   link.download = 'Andy-Vo-CV.pdf';
+  //   document.body.appendChild(link);
+  //   link.click();
+  //   document.body.removeChild(link);
+  // };
   return (
     <>
       <motion.div variants={textVariant()}>
