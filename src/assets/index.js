@@ -19,7 +19,8 @@ import reactjs from "./tech/reactjs.png";
 import redux from "./tech/redux.png";
 import tailwind from "./tech/tailwind.png";
 import typescript from "./tech/typescript.png";
-import threejs from "./tech/threejs.svg";
+// import threejs from "./tech/threejs.svg";
+import python from "./tech/python.png";
 
 import meta from "./company/meta.png";
 import shopify from "./company/shopify.png";
@@ -39,6 +40,7 @@ import una from './uni-augsburg-logo.png'
 import kiutra from './company/kiutra.png'
 import fullerton from './company/fullerton.png'
 import solarBk from './company/solarbk.png'
+import lamaBlog from './lama-blog.png'
 
 export {
   logo,
@@ -61,7 +63,7 @@ export {
   redux,
   tailwind,
   typescript,
-  threejs,
+  python,
   meta,
   shopify,
   starbucks,
@@ -76,5 +78,6 @@ export {
   fullerton,
   pomodoroTimer,
   fancyRestaurant,
-  compoundInterestCalculator
+  compoundInterestCalculator,
+  lamaBlog
 };

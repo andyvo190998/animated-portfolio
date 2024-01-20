@@ -17,14 +17,15 @@ import {
     docker,
     carrent,
     compoundInterestCalculator,
-    threejs,
+    python,
     ute,
     una,
     solarBk,
     fullerton,
     kiutra,
     pomodoroTimer,
-    fancyRestaurant
+    fancyRestaurant,
+    lamaBlog
 } from "../assets";
 
 export const navLinks = [
@@ -87,6 +88,10 @@ const technologies = [
         icon: typescript,
     },
     {
+        name: "Python",
+        icon: python,
+    },
+    {
         name: "React JS",
         icon: reactjs,
     },
@@ -105,10 +110,6 @@ const technologies = [
     {
         name: "MongoDB",
         icon: mongodb,
-    },
-    {
-        name: "Three JS",
-        icon: threejs,
     },
     {
         name: "git",
@@ -247,7 +248,7 @@ const projects = [
         deployment_link: 'https://car-rental-eight-mu.vercel.app/?manufacturer=volkswagen'
     },
     {
-        name: "Lamda Blog",
+        name: "Lama Blog",
         description:
             "Full stack social media website to allow users to create account, post, edit, update posts",
         tags: [
@@ -264,9 +265,9 @@ const projects = [
                 color: "pink-text-gradient",
             },
         ],
-        image: compoundInterestCalculator,
-        source_code_link: "https://github.com/andyvo190998/compound-interest-calculator",
-        deployment_link: 'https://andyvo190998.github.io/compound-interest-calculator/'
+        image: lamaBlog,
+        source_code_link: "https://github.com/andyvo190998/blog-app",
+        deployment_link: 'https://andyvo190998.github.io/blog-app/'
     },
     {
         name: "Compound Interest Calculator",
