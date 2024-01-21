@@ -33,6 +33,7 @@ import tripguide from "./tripguide.png";
 import pomodoroTimer from "./pomodoro-timer.png";
 import fancyRestaurant from "./fancy-restaurant.png";
 import compoundInterestCalculator from './compound-interest-calculator.png'
+import pythonProjects from './python-logo.avif'
 
 import ute from './spkt-logo.webp'
 import una from './uni-augsburg-logo.png'
@@ -79,5 +80,6 @@ export {
   pomodoroTimer,
   fancyRestaurant,
   compoundInterestCalculator,
-  lamaBlog
+  lamaBlog,
+  pythonProjects
 };

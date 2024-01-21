@@ -25,7 +25,8 @@ import {
     kiutra,
     pomodoroTimer,
     fancyRestaurant,
-    lamaBlog
+    lamaBlog,
+    pythonProjects
 } from "../assets";
 
 export const navLinks = [
@@ -294,7 +295,7 @@ const projects = [
     {
         name: "Pomodoro Timer",
         description:
-            "A comprehensive travel booking platform that allows users to book flights, hotels, and rental cars, and offers curated recommendations for popular destinations.",
+            "Pomodoro is an incredible technique for better concentration and productive. When I start working or studying, I always set a pomodoro timer to take a short rest every 25 minutes. And when I learn web development, I think why don't I develop an app to use for myself? That the reason I built this app. This is a fullstack NextJS app with jwt authentication.",
         tags: [
             {
                 name: "NextJS",
@@ -333,6 +334,23 @@ const projects = [
         image: fancyRestaurant,
         source_code_link: "https://github.com/andyvo190998/restaurant",
         deployment_link: 'https://andyvo190998.github.io/restaurant/'
+    },
+    {
+        name: "Python Apps",
+        description: "Check out some apps I built with python for fun and practice.",
+        tags: [
+            {
+                name: "Python",
+                color: "blue-text-gradient",
+            },
+            {
+                name: "Game",
+                color: "green-text-gradient",
+            }
+        ],
+        image: pythonProjects,
+        source_code_link: "https://github.com/andyvo190998?tab=repositories&q=&type=&language=python&sort=stargazers",
+        deployment_link: 'https://github.com/andyvo190998?tab=repositories&q=&type=&language=python&sort=stargazers'
     },
 ];
 
