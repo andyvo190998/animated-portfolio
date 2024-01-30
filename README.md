@@ -6,14 +6,6 @@
 
 - 👨‍💻 Visit my web portfolio to know everything about me [https://andyvo190998.github.io/animated-portfolio/](https://andyvo190998.github.io/animated-portfolio/)
 
-- 💬 Ask me about **Web Development, MERN app,...**
-
-- 📫 How to reach me **andy.vo.98vn@gmail.com**
-
-- 📄 Know about my experiences on my resume [http://tinyurl.com/2s3mj5cz](http://tinyurl.com/2s3mj5cz)
-
-- ⚡ Fun fact **I learn programming by practicing =)))**
-
 <h3 align="left">Connect with me:</h3>
 <p align="left">
 <a href="https://linkedin.com/in/bao-vo-hoang" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/linked-in-alt.svg" alt="bao-vo-hoang" height="30" width="40" /></a>
