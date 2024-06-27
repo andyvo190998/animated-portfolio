@@ -11,6 +11,7 @@ import {
 } from './components';
 import Education from './components/Education';
 
+
 const App = () => {
   return (
     <BrowserRouter>
