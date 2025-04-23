@@ -74,10 +74,10 @@ const About = () => {
             <b>From:</b> Ho Chi Minh city, VietNam
           </li>
           <li className="contact__item">
-            <b>Lives In:</b> Friedberger 5, 86161 Augsburg, Germany
+            <b>Lives In:</b> Munich city, Germany
           </li>
           <li className="contact__item">
-            <b>Age:</b> 25
+            <b>Age:</b> 27
           </li>
           <li className="contact__item">
             <b>Gender:</b> Male

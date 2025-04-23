@@ -26,7 +26,8 @@ import {
     pomodoroTimer,
     fancyRestaurant,
     lamaBlog,
-    pythonProjects
+    pythonProjects,
+    jsmd
 } from "../assets";
 
 export const navLinks = [
@@ -157,12 +158,26 @@ const experiences = [
         company_name: "kiutra",
         icon: kiutra,
         iconBg: "#E6DEDD",
-        date: "April 2023 - present",
+        date: "April 2023 - November 2024",
         points: [
-            "Brainstorm ideas for development new version of the user interface work flow.",
-            "Design and implement and maintain a browser-based GUI using React and Next.js.",
-            "Work on a python backend to interface between the newly developed user interface and our machine control API.",
-            "Support container-based deployment.",
+            "Developing and maintaining front-end applications using ReactJS, NextJS for seamless user experiences.",
+            "Building REST API with Flask, Quart, and WebSockets to enable efficient communication and data exchange.",
+            "Building gRPC API for microservices.",
+            "Creating and managing middleware in Python to facilitate inter-process communication.",
+            "Supporting and setting up software applications for the hardware team to ensure smooth integration and operation."
+        ],
+    },
+    {
+        title: "Full Stack Software Developer",
+        company_name: "Jochen Schweizer mydays Group ",
+        icon: jsmd,
+        iconBg: "#E6DEDD",
+        date: "December 2024 - present",
+        points: [
+            "As a passionate Full-Stack Developer, I specialize in building scalable and maintainable web applications using modern technologies. On the frontend, I create intuitive and performant UIs with React and TypeScript, while on the backend, I architect robust solutions using NestJS, PHP, and REST APIs.",
+            "I have a deep understanding of Hexagonal Architecture and Domain-Driven Design (DDD), ensuring that applications are modular, testable, and easy to maintain. My approach to software development prioritizes clean architecture, scalability, and best practices.",
+            "With experience in microservices and containerized deployments using Docker and Kubernetes, I focus on delivering high-availability and efficient cloud-native solutions. Additionally, I emphasize end-to-end (E2E) testing with in-house developed tools and unit testing, ensuring software reliability and high code quality.",
+            "Driven by innovation and continuous learning, I thrive on solving complex problems and delivering impactful software solutions.",
         ],
     },
 ];

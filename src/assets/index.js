@@ -39,6 +39,7 @@ import ute from './spkt-logo.webp'
 import una from './uni-augsburg-logo.png'
 
 import kiutra from './company/kiutra.png'
+import jsmd from './company/jsmd.png'
 import fullerton from './company/fullerton.png'
 import solarBk from './company/solarbk.png'
 import lamaBlog from './lama-blog.png'
@@ -81,5 +82,6 @@ export {
   fancyRestaurant,
   compoundInterestCalculator,
   lamaBlog,
-  pythonProjects
+  pythonProjects,
+  jsmd
 };

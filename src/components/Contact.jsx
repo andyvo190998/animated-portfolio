@@ -125,7 +125,7 @@ const Contact = () => {
               Where to find me
             </p>
             <p className="mb-2">
-              Friedberger 5, 86161 Augsburg, <br /> Germany
+              Bunzlauer 12, 80992 Munich, <br /> Germany
             </p>
             <p className="mb-2">andy.vo.98vn@gmail.com</p>
             <p>+49 1575 0625 876</p>

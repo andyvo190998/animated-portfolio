@@ -1,46 +1,48 @@
 {
-  "name": "animated_portfolio",
-  "private": true,
-  "version": "0.0.0",
-  "type": "module",
-  "homepage": "https://andyvo190998.github.io/3d-portfolio",
-  "scripts": {
-    "dev": "vite",
-    "build": "vite build",
-    "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
-    "preview": "vite preview",
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d dist -r https://github.com/andyvo190998/animated-porfolio"
-  },
-  "dependencies": {
-    "@emailjs/browser": "^3.11.0",
-    "@react-three/drei": "^9.88.17",
-    "@react-three/fiber": "^8.15.11",
-    "@rollup/rollup-linux-x64-gnu": "^4.9.0",
-    "@types/three": "^0.158.3",
-    "framer-motion": "^10.16.5",
-    "maath": "^0.10.4",
-    "process": "^0.11.10",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0",
-    "react-router-dom": "^6.20.0",
-    "react-tilt": "^1.0.2",
-    "react-vertical-timeline-component": "^3.6.0",
-    "serve": "^14.2.1",
-    "three": "^0.158.0"
-  },
-  "devDependencies": {
-    "@types/react": "^18.2.37",
-    "@types/react-dom": "^18.2.15",
-    "@vitejs/plugin-react": "^4.2.0",
-    "autoprefixer": "^10.4.16",
-    "eslint": "^8.53.0",
-    "eslint-plugin-react": "^7.33.2",
-    "eslint-plugin-react-hooks": "^4.6.0",
-    "eslint-plugin-react-refresh": "^0.4.4",
-    "gh-pages": "^6.1.0",
-    "postcss": "^8.4.31",
-    "tailwindcss": "^3.3.5",
-    "vite": "^5.0.0"
-  }
+	"name": "animated_portfolio",
+	"private": true,
+	"version": "0.0.0",
+	"type": "module",
+	"homepage": "https://andyvo190998.github.io/3d-portfolio",
+	"scripts": {
+		"dev": "vite",
+		"build": "vite build",
+		"lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
+		"preview": "vite preview",
+		"predeploy": "npm run build",
+		"deploy": "gh-pages -d dist -r https://github.com/andyvo190998/animated-porfolio"
+	},
+	"dependencies": {
+		"@emailjs/browser": "^3.11.0",
+		"@react-three/drei": "^9.88.17",
+		"@react-three/fiber": "^8.15.11",
+		"@types/three": "^0.158.3",
+		"framer-motion": "^10.16.5",
+		"maath": "^0.10.4",
+		"process": "^0.11.10",
+		"react": "^18.2.0",
+		"react-dom": "^18.2.0",
+		"react-router-dom": "^6.20.0",
+		"react-tilt": "^1.0.2",
+		"react-vertical-timeline-component": "^3.6.0",
+		"serve": "^14.2.1",
+		"three": "^0.158.0"
+	},
+	"optionalDependencies": {
+		"@rollup/rollup-linux-x64-gnu": "^4.9.0"
+	},
+	"devDependencies": {
+		"@types/react": "^18.2.37",
+		"@types/react-dom": "^18.2.15",
+		"@vitejs/plugin-react": "^4.2.0",
+		"autoprefixer": "^10.4.16",
+		"eslint": "^8.53.0",
+		"eslint-plugin-react": "^7.33.2",
+		"eslint-plugin-react-hooks": "^4.6.0",
+		"eslint-plugin-react-refresh": "^0.4.4",
+		"gh-pages": "^6.1.0",
+		"postcss": "^8.4.31",
+		"tailwindcss": "^3.3.5",
+		"vite": "^5.0.0"
+	}
 }
