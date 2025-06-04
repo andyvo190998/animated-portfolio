@@ -34,17 +34,6 @@ const ServiceCard = ({ index, title, icon }) => {
 };
 
 const About = () => {
-	// const handleDownloadCv = () => {
-	//   // const pdfUrl = 'src/assets/andy-cv-1.pdf';
-	//   const pdfUrl = 'public/resumei/andy-cv-1.pdf';
-	//   const link = document.createElement('a');
-	//   console.log(link);
-	//   link.href = pdfUrl;
-	//   link.download = 'Andy-Vo-CV.pdf';
-	//   document.body.appendChild(link);
-	//   link.click();
-	//   document.body.removeChild(link);
-	// };
 	return (
 		<>
 			<motion.div variants={textVariant()}>
@@ -86,7 +75,7 @@ const About = () => {
 				</ul>
 
 				<a
-					href="./resumei/andy-cv-4.pdf"
+					href="./resumei/andy-cv-5.pdf"
 					download="Andy-Vo-CV.pdf"
 					// onClick={() => handleDownloadCv()}
 					// className="bg-[#915eff] mt-5 py-3 px-8 font-bold shadow-md shadow-primary outline-none rounded-xl w-fit"
