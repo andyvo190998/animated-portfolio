@@ -18,6 +18,7 @@ const ServiceCard = ({ index, title, icon }) => {
 				className="w-full green-pink-gradient p-[1px] rounded-[20px] shadow-card"
 			>
 				<div
+					// @ts-ignore
 					options={{
 						max: 45,
 						scale: 1,
@@ -75,7 +76,7 @@ const About = () => {
 				</ul>
 
 				<a
-					href="./resumei/andy-cv-5.pdf"
+					href="./resumei/andy-cv-6.pdf"
 					download="Andy-Vo-CV.pdf"
 					// onClick={() => handleDownloadCv()}
 					// className="bg-[#915eff] mt-5 py-3 px-8 font-bold shadow-md shadow-primary outline-none rounded-xl w-fit"

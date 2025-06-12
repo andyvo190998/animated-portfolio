@@ -158,7 +158,7 @@ const experiences = [
 		company_name: "kiutra",
 		icon: kiutra,
 		iconBg: "#E6DEDD",
-		date: "April 2023 - November 2024",
+		date: "April 2022 - November 2024",
 		points: [
 			"Developing and maintaining front-end applications using ReactJS, NextJS for seamless user experiences.",
 			"Building REST API with Flask, Quart, and WebSockets to enable efficient communication and data exchange.",
