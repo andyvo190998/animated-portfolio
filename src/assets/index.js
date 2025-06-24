@@ -1,3 +1,4 @@
+// @ts-nocheck
 import logo from "./logo.svg";
 import backend from "./backend.png";
 import creator from "./creator.png";
@@ -32,56 +33,58 @@ import jobit from "./jobit.png";
 import tripguide from "./tripguide.png";
 import pomodoroTimer from "./pomodoro-timer.png";
 import fancyRestaurant from "./fancy-restaurant.png";
-import compoundInterestCalculator from './compound-interest-calculator.png'
-import pythonProjects from './python-logo.avif'
+import compoundInterestCalculator from './compound-interest-calculator.png';
+import pythonProjects from './python-logo.avif';
 
-import ute from './spkt-logo.webp'
-import una from './uni-augsburg-logo.png'
+import ute from './spkt-logo.webp';
+import una from './uni-augsburg-logo.png';
 
-import kiutra from './company/kiutra.png'
-import jsmd from './company/jsmd.png'
-import fullerton from './company/fullerton.png'
-import solarBk from './company/solarbk.png'
-import lamaBlog from './lama-blog.png'
+import kiutra from './company/kiutra.png';
+import jsmd from './company/jsmd.png';
+import fullerton from './company/fullerton.png';
+import solarBk from './company/solarbk.png';
+import lamaBlog from './lama-blog.png';
+import profile from './profile/profile.jpeg';
 
 export {
-  logo,
-  backend,
-  creator,
-  mobile,
-  web,
-  github,
-  menu,
-  close,
-  css,
-  docker,
-  figma,
-  git,
-  html,
-  javascript,
-  mongodb,
-  nodejs,
-  reactjs,
-  redux,
-  tailwind,
-  typescript,
-  python,
-  meta,
-  shopify,
-  starbucks,
-  tesla,
-  carrent,
-  jobit,
-  tripguide,
-  ute,
-  una,
-  solarBk,
-  kiutra,
-  fullerton,
-  pomodoroTimer,
-  fancyRestaurant,
-  compoundInterestCalculator,
-  lamaBlog,
-  pythonProjects,
-  jsmd
+	logo,
+	backend,
+	creator,
+	mobile,
+	web,
+	github,
+	menu,
+	close,
+	css,
+	docker,
+	figma,
+	git,
+	html,
+	javascript,
+	mongodb,
+	nodejs,
+	reactjs,
+	redux,
+	tailwind,
+	typescript,
+	python,
+	meta,
+	shopify,
+	starbucks,
+	tesla,
+	carrent,
+	jobit,
+	tripguide,
+	ute,
+	una,
+	solarBk,
+	kiutra,
+	fullerton,
+	pomodoroTimer,
+	fancyRestaurant,
+	compoundInterestCalculator,
+	lamaBlog,
+	pythonProjects,
+	jsmd,
+	profile
 };

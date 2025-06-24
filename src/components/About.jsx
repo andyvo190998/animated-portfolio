@@ -1,14 +1,12 @@
-/* eslint-disable react/no-unknown-property */
+/* eslint-disable react-refresh/only-export-components */
 /* eslint-disable react/prop-types */
-// eslint-disable-next-line no-unused-vars
-import React from "react";
-
 import { Tilt } from "react-tilt";
 import { motion } from "framer-motion";
 import { styles } from "../style";
 import { services } from "../constants";
 import { fadeIn, textVariant } from "../utils/motion";
 import { SectionWrapper } from "./hoc";
+import { profile } from "../assets";
 
 const ServiceCard = ({ index, title, icon }) => {
 	return (
@@ -18,7 +16,7 @@ const ServiceCard = ({ index, title, icon }) => {
 				className="w-full green-pink-gradient p-[1px] rounded-[20px] shadow-card"
 			>
 				<div
-					// @ts-ignore
+					// eslint-disable-next-line react/no-unknown-property
 					options={{
 						max: 45,
 						scale: 1,
@@ -55,35 +53,39 @@ const About = () => {
 				demonstrated ability to adapt to evolving technologies.
 			</motion.p>
 
-			<motion.div variants={fadeIn("", "", 0.1, 1)}>
-				<ul className="overview__basic-contact">
-					<li className="contact__item">
-						<b>From:</b> Ho Chi Minh city, VietNam
-					</li>
-					{/* <li className="contact__item">
-            <b>Lives In:</b> Munich city, Germany
-          </li> */}
-					<li className="contact__item">
-						<b>Age:</b> 27
-					</li>
-					<li className="contact__item">
-						<b>Gender:</b> Male
-					</li>
-					<li className="contact__item">
-						<b>Languages:</b> VietNamese (native speaker), English (proficient), <br />
-						German (intermediate)
-					</li>
-				</ul>
+			<motion.div variants={fadeIn("left", "tween", 0.2, 1)}>
+				<div className="flex md:flex-row flex-col items-center gap-2">
+					<img className="w-40 h-40 rounded-full" src={profile} alt="profile image" />
+					<div>
+						<ul className="overview__basic-contact">
+							<li className="contact__item">
+								<b>From:</b> Ho Chi Minh city, VietNam
+							</li>
+							{/* <li className="contact__item">
+						<b>Lives In:</b> Munich city, Germany
+					</li> */}
+							<li className="contact__item">
+								<b>Age:</b> 27
+							</li>
+							<li className="contact__item">
+								<b>Gender:</b> Male
+							</li>
+							<li className="contact__item">
+								<b>Languages:</b> VietNamese (native speaker), English (proficient),{" "}
+								<br />
+								German (intermediate)
+							</li>
+						</ul>
 
-				<a
-					href="./resumei/andy-cv-6.pdf"
-					download="Andy-Vo-CV.pdf"
-					// onClick={() => handleDownloadCv()}
-					// className="bg-[#915eff] mt-5 py-3 px-8 font-bold shadow-md shadow-primary outline-none rounded-xl w-fit"
-					className="bg-[#151030] hover:bg-inherit border-[1px] border-rose-50 mt-5 py-3 px-8 font-bold shadow-md shadow-primary outline-none rounded-xl w-fit"
-				>
-					Download Résumé
-				</a>
+						<a
+							href="./resumei/andy-cv-6.pdf"
+							download="Andy-Vo-CV.pdf"
+							className="bg-[#151030] hover:bg-inherit border-[1px] border-rose-50 mt-5 py-3 px-8 font-bold shadow-md shadow-primary outline-none rounded-xl w-fit"
+						>
+							Download Résumé
+						</a>
+					</div>
+				</div>
 			</motion.div>
 
 			<div className="mt-20 flex flex-wrap gap-10">

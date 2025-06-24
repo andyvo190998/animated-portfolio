@@ -41,7 +41,11 @@ const Hero = () => {
 				</div>
 			</div>
 			<ComputersCanvas isMobile={isMobile} />
-			<div className="absolute xs:bottom-0 bottom-32 w-full flex justify-center">
+			<div
+				className={`absolute xs:bottom-0 ${
+					isMobile ? "bottom-16" : "bottom-32"
+				} w-full flex justify-center`}
+			>
 				<a href="#about">
 					<div className="flex justify-center items-start p-2 w-[35px] h-[64px] rounded-3xl border-4 border-secondary">
 						<motion.div
