@@ -2,16 +2,16 @@
 /* eslint-disable react-refresh/only-export-components */
 import { useRef, useState } from "react";
 import { motion } from "framer-motion";
-import emailjs from "@emailjs/browser";
 import { styles } from "../style";
 import { EarthCanvas } from "./canvas";
 import { SectionWrapper } from "./hoc";
 import { slideIn } from "../utils/motion";
+import axios from "axios";
 
 const Contact = () => {
 	const formRef = useRef();
 	const [form, setForm] = useState({
-		name: "",
+		subject: "",
 		email: "",
 		message: "",
 	});
@@ -22,42 +22,29 @@ const Contact = () => {
 		const { name, value } = e.target;
 		setForm({ ...form, [name]: value });
 	};
-	const handleSubmit = (e) => {
+	const handleSubmit = async (e) => {
 		e.preventDefault();
 		setLoading(true);
-		const publicKey = import.meta.env.VITE_EMAILJS_PUBLIC_KEY;
-		const templateId = import.meta.env.VITE_EMAILJS_TEMPLATE_ID;
-		const serviceId = import.meta.env.VITE_EMAILJS_SERVICE_ID;
-		const receivedEmail = import.meta.env.VITE_RECEIVED_EMAIL;
-		const receivedName = import.meta.env.VITE_RECEIVED_NAME;
-
-		emailjs
-			.send(
-				serviceId,
-				templateId,
+		const VITE_PORTFOLIO_API = import.meta.env.VITE_PORTFOLIO_API;
+		await axios
+			.post(
+				`${VITE_PORTFOLIO_API}/email`,
 				{
-					from_name: form.name,
-					to_name: receivedName,
-					from_email: form.email,
-					to_email: receivedEmail,
-					message: form.message,
+					from: form.email,
+					subject: form.subject,
+					html: form.message,
 				},
-				publicKey
+				{
+					headers: { "Access-Control-Allow-Origin": "*" },
+				}
 			)
 			.then(() => {
-				setLoading(false);
-				alert("Thank you. I will get back to you as soon as soon as possible.");
-				setForm({
-					name: "",
-					email: "",
-					message: "",
-				});
+				alert("Thank you. I will get back to you as soon as possible.");
 			})
-			.catch((err) => {
-				console.log(err);
-				alert("Sending email fail!");
-				setLoading(false);
+			.catch(() => {
+				alert("Something went wrong. Please try again later.");
 			});
+		setLoading(false);
 	};
 
 	return (
@@ -77,18 +64,6 @@ const Contact = () => {
 						className="mt-12 flex flex-col gap-8"
 					>
 						<label className="flex flex-col">
-							<span className="text-white font-medium mb-4">Your Name</span>
-							<input
-								type="text"
-								name="name"
-								value={form.name}
-								onChange={handleChange}
-								placeholder="What's your name?"
-								className="bg-tertiary py-4 px-6 placeholder:text-secondary text-white rounded-lg outline-none border-none font-medium"
-							/>
-						</label>
-
-						<label className="flex flex-col">
 							<span className="text-white font-medium mb-4">Your Email</span>
 							<input
 								type="email"
@@ -96,6 +71,18 @@ const Contact = () => {
 								value={form.email}
 								onChange={handleChange}
 								placeholder="What's your email?"
+								className="bg-tertiary py-4 px-6 placeholder:text-secondary text-white rounded-lg outline-none border-none font-medium"
+							/>
+						</label>
+
+						<label className="flex flex-col">
+							<span className="text-white font-medium mb-4">Subject</span>
+							<input
+								type="text"
+								name="subject"
+								value={form.subject}
+								onChange={handleChange}
+								placeholder="What's your message subject?"
 								className="bg-tertiary py-4 px-6 placeholder:text-secondary text-white rounded-lg outline-none border-none font-medium"
 							/>
 						</label>
