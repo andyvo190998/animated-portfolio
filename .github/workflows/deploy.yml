@@ -30,6 +30,7 @@ jobs:
                   VITE_EMAILJS_TEMPLATE_ID: ${{ secrets.VITE_EMAILJS_TEMPLATE_ID }}
                   VITE_RECIEVED_EMAIL: ${{ secrets.VITE_RECIEVED_EMAIL }}
                   VITE_RECIEVED_NAME: ${{ secrets.VITE_RECIEVED_NAME }}
+                  VITE_PORTFOLIO_API: ${{ secrets.VITE_PORTFOLIO_API }}
 
             - name: Upload production-ready build files
               uses: actions/upload-artifact@v4
