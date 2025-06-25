@@ -26,7 +26,6 @@ const Contact = () => {
 		e.preventDefault();
 		setLoading(true);
 		const VITE_PORTFOLIO_API = import.meta.env.VITE_PORTFOLIO_API;
-		console.log(VITE_PORTFOLIO_API);
 		await axios
 			.post(
 				`${VITE_PORTFOLIO_API}/email`,
