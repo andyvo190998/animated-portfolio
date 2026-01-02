@@ -1,9 +1,8 @@
 import { BrowserRouter } from "react-router-dom";
-import { About, Contact, Experience, Navbar, Tech, Works, Hero, StarsCanvas } from "./components";
+import { About, Contact, Experience, Navbar, Tech, Works, Hero, StarsCanvas, ChatBot } from "./components";
 import Education from "./components/Education";
 
 const App = () => {
-	console.log("App component rendered");
 	return (
 		<BrowserRouter>
 			<div className="relative z-0 bg-primary">
@@ -20,6 +19,7 @@ const App = () => {
 					<Contact />
 					<StarsCanvas />
 				</div>
+				<ChatBot />
 			</div>
 		</BrowserRouter>
 	);
