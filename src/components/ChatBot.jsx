@@ -1,17 +1,26 @@
-import { useState, useRef, useEffect } from "react";
+import { useRef, useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import { useChat } from "@ai-sdk/react";
 
 const ChatBot = () => {
 	const [isOpen, setIsOpen] = useState(false);
-	const [messages, setMessages] = useState([
-		{
-			id: 1,
-			type: "bot",
-			text: "Hi there! I'm Andy's assistant. How can I help you today?",
-		},
-	]);
-	const [inputValue, setInputValue] = useState("");
+	const [input, setInput] = useState("");
 	const messagesEndRef = useRef(null);
+	const inputRef = useRef(null);
+
+	const { messages, sendMessage, status, error, stop, regenerate } = useChat({
+		api: "/api/chat",
+		initialMessages: [
+			{
+				id: "welcome",
+				role: "assistant",
+				content:
+					"Hi there! I'm Andy's assistant. Ask me anything about Andy's skills, experience, or projects!",
+			},
+		],
+	});
+
+	const isLoading = status === "submitted" || status === "streaming";
 
 	const scrollToBottom = () => {
 		messagesEndRef.current?.scrollIntoView({ behavior: "smooth" });
@@ -19,35 +28,27 @@ const ChatBot = () => {
 
 	useEffect(() => {
 		scrollToBottom();
-	}, [messages]);
+	}, [messages, status]);
 
-	const handleSend = () => {
-		if (!inputValue.trim()) return;
+	useEffect(() => {
+		if (isOpen && inputRef.current) {
+			inputRef.current.focus();
+		}
+	}, [isOpen]);
 
-		const userMessage = {
-			id: Date.now(),
-			type: "user",
-			text: inputValue,
-		};
+	const onFormSubmit = async (e) => {
+		e.preventDefault();
+		if (!input.trim() || isLoading) return;
 
-		setMessages((prev) => [...prev, userMessage]);
-		setInputValue("");
-
-		// Simulate bot response (replace with actual API call later)
-		setTimeout(() => {
-			const botResponse = {
-				id: Date.now() + 1,
-				type: "bot",
-				text: "Thanks for your message! This is a demo response. The chatbot backend will be integrated soon.",
-			};
-			setMessages((prev) => [...prev, botResponse]);
-		}, 1000);
+		const message = input;
+		setInput("");
+		await sendMessage({ text: message });
 	};
 
-	const handleKeyPress = (e) => {
+	const handleKeyDown = (e) => {
 		if (e.key === "Enter" && !e.shiftKey) {
 			e.preventDefault();
-			handleSend();
+			onFormSubmit(e);
 		}
 	};
 
@@ -137,8 +138,12 @@ const ChatBot = () => {
 										Andy&apos;s Assistant
 									</h3>
 									<p className="text-secondary text-xs flex items-center gap-1">
-										<span className="w-2 h-2 bg-green-500 rounded-full animate-pulse"></span>
-										Online
+										<span
+											className={`w-2 h-2 rounded-full ${
+												isLoading ? "bg-yellow-500" : "bg-green-500"
+											} animate-pulse`}
+										></span>
+										{isLoading ? "Typing..." : "Online"}
 									</p>
 								</div>
 							</div>
@@ -153,60 +158,123 @@ const ChatBot = () => {
 									animate={{ opacity: 1, y: 0 }}
 									transition={{ duration: 0.2 }}
 									className={`flex ${
-										message.type === "user" ? "justify-end" : "justify-start"
+										message.role === "user" ? "justify-end" : "justify-start"
 									}`}
 								>
 									<div
-										className={`max-w-[80%] px-4 py-2.5 rounded-2xl text-sm ${
-											message.type === "user"
+										className={`max-w-[80%] px-4 py-2.5 rounded-2xl text-sm whitespace-pre-wrap ${
+											message.role === "user"
 												? "bg-gradient-to-r from-[#915eff] to-[#7c3aed] text-white rounded-br-md"
 												: "bg-white/5 text-secondary border border-white/10 rounded-bl-md"
 										}`}
 									>
-										{message.text}
+										{message.content}
 									</div>
 								</motion.div>
 							))}
+
+							{/* Typing Indicator */}
+							{isLoading && messages[messages.length - 1]?.role === "user" && (
+								<motion.div
+									initial={{ opacity: 0, y: 10 }}
+									animate={{ opacity: 1, y: 0 }}
+									className="flex justify-start"
+								>
+									<div className="bg-white/5 text-secondary border border-white/10 rounded-2xl rounded-bl-md px-4 py-3">
+										<div className="flex gap-1">
+											<span className="w-2 h-2 bg-secondary/50 rounded-full animate-bounce [animation-delay:-0.3s]"></span>
+											<span className="w-2 h-2 bg-secondary/50 rounded-full animate-bounce [animation-delay:-0.15s]"></span>
+											<span className="w-2 h-2 bg-secondary/50 rounded-full animate-bounce"></span>
+										</div>
+									</div>
+								</motion.div>
+							)}
+
+							{/* Error Message */}
+							{error && (
+								<motion.div
+									initial={{ opacity: 0, y: 10 }}
+									animate={{ opacity: 1, y: 0 }}
+									className="flex flex-col gap-2"
+								>
+									<div className="flex justify-start">
+										<div className="bg-red-500/10 text-red-400 border border-red-500/20 rounded-2xl rounded-bl-md px-4 py-2.5 text-sm">
+											Sorry, something went wrong. Please try again.
+										</div>
+									</div>
+									<button
+										onClick={() => regenerate()}
+										className="self-start ml-2 text-xs text-secondary hover:text-white transition-colors underline"
+									>
+										Retry last message
+									</button>
+								</motion.div>
+							)}
+
 							<div ref={messagesEndRef} />
 						</div>
 
 						{/* Input */}
-						<div className="p-4 border-t border-white/10 bg-primary/50">
+						<form
+							onSubmit={onFormSubmit}
+							className="p-4 border-t border-white/10 bg-primary/50"
+						>
 							<div className="flex items-center gap-2">
 								<input
+									ref={inputRef}
 									type="text"
-									value={inputValue}
-									onChange={(e) => setInputValue(e.target.value)}
-									onKeyPress={handleKeyPress}
+									value={input}
+									onChange={(e) => setInput(e.target.value)}
+									onKeyDown={handleKeyDown}
 									placeholder="Type a message..."
-									className="flex-1 bg-white/5 border border-white/10 rounded-xl px-4 py-2.5 text-sm text-white placeholder:text-secondary/50 focus:outline-none focus:border-[#915eff]/50 focus:ring-1 focus:ring-[#915eff]/25 transition-all"
+									disabled={isLoading}
+									className="flex-1 bg-white/5 border border-white/10 rounded-xl px-4 py-2.5 text-sm text-white placeholder:text-secondary/50 focus:outline-none focus:border-[#915eff]/50 focus:ring-1 focus:ring-[#915eff]/25 transition-all disabled:opacity-50"
 								/>
-								<motion.button
-									onClick={handleSend}
-									whileHover={{ scale: 1.05 }}
-									whileTap={{ scale: 0.95 }}
-									disabled={!inputValue.trim()}
-									className="w-10 h-10 rounded-xl bg-gradient-to-r from-[#915eff] to-[#7c3aed] flex items-center justify-center disabled:opacity-50 disabled:cursor-not-allowed hover:shadow-lg hover:shadow-purple-500/25 transition-shadow"
-								>
-									<svg
-										className="w-5 h-5 text-white"
-										fill="none"
-										stroke="currentColor"
-										viewBox="0 0 24 24"
+								{isLoading ? (
+									<motion.button
+										type="button"
+										onClick={() => stop()}
+										whileHover={{ scale: 1.05 }}
+										whileTap={{ scale: 0.95 }}
+										className="w-10 h-10 rounded-xl bg-red-500/80 hover:bg-red-500 flex items-center justify-center transition-colors"
+										title="Stop generating"
 									>
-										<path
-											strokeLinecap="round"
-											strokeLinejoin="round"
-											strokeWidth={2}
-											d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8"
-										/>
-									</svg>
-								</motion.button>
+										<svg
+											className="w-4 h-4 text-white"
+											fill="currentColor"
+											viewBox="0 0 24 24"
+										>
+											<rect x="6" y="6" width="12" height="12" rx="2" />
+										</svg>
+									</motion.button>
+								) : (
+									<motion.button
+										type="submit"
+										whileHover={{ scale: 1.05 }}
+										whileTap={{ scale: 0.95 }}
+										disabled={!input.trim()}
+										className="w-10 h-10 rounded-xl bg-gradient-to-r from-[#915eff] to-[#7c3aed] flex items-center justify-center disabled:opacity-50 disabled:cursor-not-allowed hover:shadow-lg hover:shadow-purple-500/25 transition-shadow"
+									>
+										<svg
+											className="w-5 h-5 text-white"
+											fill="none"
+											stroke="currentColor"
+											viewBox="0 0 24 24"
+										>
+											<path
+												strokeLinecap="round"
+												strokeLinejoin="round"
+												strokeWidth={2}
+												d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8"
+											/>
+										</svg>
+									</motion.button>
+								)}
 							</div>
 							<p className="text-[10px] text-secondary/50 text-center mt-2">
 								Powered by AI
 							</p>
-						</div>
+						</form>
 					</motion.div>
 				)}
 			</AnimatePresence>
