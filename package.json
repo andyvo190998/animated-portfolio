@@ -13,7 +13,6 @@
 		"deploy": "gh-pages -d dist -r https://github.com/andyvo190998/animated-porfolio"
 	},
 	"dependencies": {
-		"@ai-sdk/openai": "^3.0.2",
 		"@ai-sdk/react": "^3.0.5",
 		"@emailjs/browser": "^3.11.0",
 		"@react-three/drei": "^9.88.17",
