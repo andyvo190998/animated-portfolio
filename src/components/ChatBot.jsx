@@ -1,6 +1,7 @@
 import { useRef, useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { useChat } from "@ai-sdk/react";
+import { DefaultChatTransport } from "ai";
 
 // LocalStorage key for persisting chat messages
 const CHAT_STORAGE_KEY = "andy-portfolio-chat-messages";
@@ -57,6 +58,10 @@ const saveMessagesToStorage = (messages) => {
 	}
 };
 
+const chatTransport = new DefaultChatTransport({
+	api: import.meta.env.VITE_PORTFOLIO_API + "/chat",
+});
+
 const ChatBot = () => {
 	const [isOpen, setIsOpen] = useState(false);
 	const [input, setInput] = useState("");
@@ -65,8 +70,8 @@ const ChatBot = () => {
 	const isInitialized = useRef(false);
 
 	const { messages, sendMessage, status, error, stop, regenerate, setMessages } = useChat({
-		api: import.meta.env.VITE_PORTFOLIO_API + "/chat",
 		initialMessages: [welcomeMessage],
+		transport: chatTransport,
 	});
 	const isLoading = status === "submitted" || status === "streaming";
 
