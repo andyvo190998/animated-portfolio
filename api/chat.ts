@@ -34,7 +34,9 @@ Full Stack Software Developer at Jochen Schweizer mydays Group (December 2024 - 
 
 ## Technical Skills
 Frontend: React, NextJS, TypeScript, Redux, Tailwind CSS, HTML, CSS, JavaScript
+Mobile: React Native, Expo (building modern cross-platform mobile applications)
 Backend: Node.js, NestJS, PHP, Python, Flask, Quart, WebSockets
+AI/ML: Experience working with AI technologies, LLMs, AI SDK integration, building AI-powered applications
 Database: MongoDB, MySQL
 DevOps: Docker, Kubernetes, Git
 Design: Figma
@@ -50,6 +52,8 @@ Design: Figma
 4. Pomodoro Timer - NextJS app with JWT authentication and Material UI
 5. Fancy Restaurant - Responsive modern restaurant website with React
 6. Python Apps - Various Python projects including games
+7. Mobile Apps - Cross-platform mobile applications built with React Native and Expo
+8. AI-Powered Portfolio Chatbot - This chatbot you're talking to, built with Vercel AI SDK and OpenAI
 
 ## Portfolio Links
 - GitHub: github.com/andyvo190998
@@ -79,8 +83,8 @@ export const POST = async (req: Request) => {
 			messages: modelMessages,
 		});
 
-		// Return the stream response
-		return result.toTextStreamResponse();
+		// Return UI message stream response for @ai-sdk/react useChat hook
+		return result.toUIMessageStreamResponse();
 	} catch (error) {
 		console.error(error);
 		return new Response("Internal Server Error", { status: 500 });
