@@ -65,7 +65,7 @@ const ChatBot = () => {
 	const isInitialized = useRef(false);
 
 	const { messages, sendMessage, status, error, stop, regenerate, setMessages } = useChat({
-		api: "/api/chat",
+		api: import.meta.env.VITE_PORTFOLIO_API + "/chat",
 		initialMessages: [welcomeMessage],
 	});
 	const isLoading = status === "submitted" || status === "streaming";
