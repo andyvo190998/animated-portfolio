@@ -1,0 +1,15 @@
+p {
+	background-image: url("../assets/animated-background.png");
+	background-size: cover;
+	background-clip: text;
+	color: transparent;
+	animation: animate 20s linear infinite;
+	font-weight: 900;
+	font-size: 2rem;
+}
+
+@keyframes animate {
+	to {
+		background-position-x: -500px;
+	}
+}
