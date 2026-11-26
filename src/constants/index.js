@@ -25,7 +25,7 @@ import {
 	kiutra,
 	pomodoroTimer,
 	fancyRestaurant,
-	lamaBlog,
+	aiExpenseTracker,
 	pythonProjects,
 	jsmd
 } from "../assets";
@@ -242,6 +242,28 @@ const testimonials = [
 
 const projects = [
 	{
+		name: "AI Expense Tracker",
+		description:
+			"AI-powered expense tracker with a dashboard for managing and reviewing expenses.",
+		tags: [
+			{
+				name: "Langchain",
+				color: "blue-text-gradient",
+			},
+			{
+				name: "FastAPI",
+				color: "green-text-gradient",
+			},
+			{
+				name: "OpenAI",
+				color: "pink-text-gradient",
+			},
+		],
+		image: aiExpenseTracker,
+		source_code_link: "https://github.com/andyvo190998/expense-tracker-ai",
+		deployment_link: 'https://github.com/andyvo190998/expense-tracker-ai'
+	},
+	{
 		name: "Car Rent",
 		description:
 			"Web-based platform that allows users to search, book, and manage car rentals from various providers, providing a convenient and efficient solution for transportation needs.",
@@ -263,28 +285,7 @@ const projects = [
 		source_code_link: "https://github.com/andyvo190998/car-rental",
 		deployment_link: 'https://car-rental-eight-mu.vercel.app/?manufacturer=volkswagen'
 	},
-	{
-		name: "Lama Blog",
-		description:
-			"Full stack social media website to allow users to create account, post, edit, update posts",
-		tags: [
-			{
-				name: "ReactJS",
-				color: "blue-text-gradient",
-			},
-			{
-				name: "NodeJS",
-				color: "green-text-gradient",
-			},
-			{
-				name: "Mysql",
-				color: "pink-text-gradient",
-			},
-		],
-		image: lamaBlog,
-		source_code_link: "https://github.com/andyvo190998/blog-app",
-		deployment_link: 'https://andyvo190998.github.io/blog-app/'
-	},
+
 	{
 		name: "Compound Interest Calculator",
 		description:

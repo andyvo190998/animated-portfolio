@@ -43,7 +43,7 @@ import kiutra from './company/kiutra.png';
 import jsmd from './company/jsmd.png';
 import fullerton from './company/fullerton.png';
 import solarBk from './company/solarbk.png';
-import lamaBlog from './lama-blog.png';
+import aiExpenseTracker from './ai-expensetracker.png';
 import profile from './profile/profile.jpeg';
 
 export {
@@ -83,7 +83,7 @@ export {
 	pomodoroTimer,
 	fancyRestaurant,
 	compoundInterestCalculator,
-	lamaBlog,
+	aiExpenseTracker,
 	pythonProjects,
 	jsmd,
 	profile
