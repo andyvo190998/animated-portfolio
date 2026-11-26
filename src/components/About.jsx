@@ -44,13 +44,12 @@ const About = () => {
 				variants={fadeIn("", "", 0.1, 1)}
 				className="mt-4 mb-4 text-secondary text-[17px] max-w-3xl leading-[30px]"
 			>
-				Versatile and self-motivated Full Stack Web Developer with a strong foundation in
-				both front-end and back-end technologies with 3 years experience. As a self-taught
-				learner, I have honed my skills through hands-on projects and a passion for staying
-				at the forefront of web development trends. Proficient in latest technologies, and
-				experienced in building dynamic, responsive web applications. My journey as a
-				self-taught developer reflects a commitment to continuous improvement and a
-				demonstrated ability to adapt to evolving technologies.
+				I'm a Full-stack Software Engineer with over 5 years of experience building
+				applications and features that directly impact real users. I've worked with
+				large-scale, complex systems serving hundreds of thousands of users during peak
+				seasons, focusing on performance, scalability, and reliability. <br /> <br /> As a
+				self-taught engineer, I'm passionate about solving complex problems, continuous
+				learning, and exploring AI engineering to build practical, impactful solutions.
 			</motion.p>
 
 			<motion.div variants={fadeIn("left", "tween", 0.2, 1)}>
@@ -65,7 +64,7 @@ const About = () => {
 						<b>Lives In:</b> Munich city, Germany
 					</li> */}
 							<li className="contact__item">
-								<b>Age:</b> 27
+								<b>Age:</b> 28
 							</li>
 							<li className="contact__item">
 								<b>Gender:</b> Male
@@ -78,7 +77,7 @@ const About = () => {
 						</ul>
 
 						<a
-							href="./resumei/andy-cv-6.pdf"
+							href="./resumei/andy-cv-7.pdf"
 							download="Andy-Vo-CV.pdf"
 							className="bg-[#151030] hover:bg-inherit border-[1px] border-rose-50 mt-5 py-3 px-8 font-bold shadow-md shadow-primary outline-none rounded-xl w-fit"
 						>

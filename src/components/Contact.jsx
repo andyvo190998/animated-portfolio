@@ -36,7 +36,7 @@ const Contact = () => {
 				},
 				{
 					headers: { "Access-Control-Allow-Origin": "*" },
-				}
+				},
 			)
 			.then(() => {
 				alert("Thank you. I will get back to you as soon as possible.");
@@ -111,12 +111,12 @@ const Contact = () => {
 						<p className="text-secondary mb-3 border-b border-secondary border-dashed pb-2">
 							Where to find me
 						</p>
-						{/* <p className="mb-2">
-              Bunzlauer 12, 80992 Munich, <br /> Germany
-            </p> */}
 						<p className="mb-2">
-							36 Bờ Bao Tân Thắng, 7600 <br /> Hồ Chí Minh, Vietnam
+							Bunzlauer 12, 80992 Munich, <br /> Germany
 						</p>
+						{/* <p className="mb-2">
+							36 Bờ Bao Tân Thắng, 7600 <br /> Hồ Chí Minh, Vietnam
+						</p> */}
 						<p className="mb-2">andy.vo.webdeveloper@gmail.com</p>
 						<p>+49 1575 0625 876</p>
 					</div>
