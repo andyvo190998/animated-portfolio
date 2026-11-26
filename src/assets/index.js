@@ -8,14 +8,14 @@ import github from "./github.png";
 import menu from "./menu.svg";
 import close from "./close.svg";
 
-import css from "./tech/css.png";
+import pinecone from "./tech/pinecone.png";
 import docker from "./tech/docker.png";
 import figma from "./tech/figma.png";
 import git from "./tech/git.png";
-import html from "./tech/html.png";
-import javascript from "./tech/javascript.png";
+import langchain from "./tech/langchain.png";
+import postgresql from "./tech/postgresql.png";
 import mongodb from "./tech/mongodb.png";
-import nodejs from "./tech/nodejs.png";
+import nestjs from "./tech/nestjs.png";
 import reactjs from "./tech/reactjs.png";
 import redux from "./tech/redux.png";
 import tailwind from "./tech/tailwind.png";
@@ -55,14 +55,14 @@ export {
 	github,
 	menu,
 	close,
-	css,
+	pinecone,
 	docker,
 	figma,
 	git,
-	html,
-	javascript,
+	langchain,
+	postgresql,
 	mongodb,
-	nodejs,
+	nestjs,
 	reactjs,
 	redux,
 	tailwind,

@@ -3,14 +3,14 @@ import {
 	backend,
 	creator,
 	web,
-	javascript,
+	postgresql,
 	typescript,
-	html,
-	css,
+	langchain,
+	pinecone,
 	reactjs,
 	redux,
 	tailwind,
-	nodejs,
+	nestjs,
 	mongodb,
 	git,
 	figma,
@@ -37,7 +37,7 @@ export const navLinks = [
 	},
 	{
 		id: "work",
-		title: "Work",
+		title: "Works",
 	},
 	{
 		id: "educations",
@@ -74,16 +74,16 @@ const services = [
 
 const technologies = [
 	{
-		name: "HTML 5",
-		icon: html,
+		name: "LangChain",
+		icon: langchain,
 	},
 	{
-		name: "CSS 3",
-		icon: css,
+		name: "Pinecone",
+		icon: pinecone,
 	},
 	{
-		name: "JavaScript",
-		icon: javascript,
+		name: "PostgreSQL",
+		icon: postgresql,
 	},
 	{
 		name: "TypeScript",
@@ -106,8 +106,8 @@ const technologies = [
 		icon: tailwind,
 	},
 	{
-		name: "Node JS",
-		icon: nodejs,
+		name: "NestJS",
+		icon: nestjs,
 	},
 	{
 		name: "MongoDB",
@@ -129,28 +129,16 @@ const technologies = [
 
 const experiences = [
 	{
-		title: "R&D Engineer",
-		company_name: "SolarBK",
-		icon: solarBk,
+		title: "Full Stack Software Developer",
+		company_name: "Jochen Schweizer mydays Group ",
+		icon: jsmd,
 		iconBg: "#E6DEDD",
-		date: "December 2019 - December 2020",
+		date: "December 2024 - present",
 		points: [
-			"Research and develop new trend of solar cell.",
-			"Optimize efficiency of current solar cell.",
-			"Receive feedbacks from clients and find the solution to fix these issues.",
-			"Deal with supplier to get the a good material for making a solar cell.",
-		],
-	},
-	{
-		title: "Full Stack Developer",
-		company_name: "FULLERTON HEALTH",
-		icon: fullerton,
-		iconBg: "#E6DEDD",
-		date: "July 2021 - October 2021",
-		points: [
-			"Developing and maintaining web applications using React.js and other related technologies.",
-			"Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-			"Implementing responsive design and ensuring cross-browser compatibility.",
+			"As a passionate Full-Stack Developer, I specialize in building scalable and maintainable web applications using modern technologies. On the frontend, I create intuitive and performant UIs with React and TypeScript, while on the backend, I architect robust solutions using NestJS, PHP, and REST APIs.",
+			"I have a deep understanding of Hexagonal Architecture and Domain-Driven Design (DDD), ensuring that applications are modular, testable, and easy to maintain. My approach to software development prioritizes clean architecture, scalability, and best practices.",
+			"With experience in microservices and containerized deployments using Docker and Kubernetes, I focus on delivering high-availability and efficient cloud-native solutions. Additionally, I emphasize end-to-end (E2E) testing with in-house developed tools and unit testing, ensuring software reliability and high code quality.",
+			"Driven by innovation and continuous learning, I thrive on solving complex problems and delivering impactful software solutions.",
 		],
 	},
 	{
@@ -167,35 +155,34 @@ const experiences = [
 		],
 	},
 	{
-		title: "Full Stack Software Developer",
-		company_name: "Jochen Schweizer mydays Group ",
-		icon: jsmd,
+		title: "Full Stack Developer",
+		company_name: "FULLERTON HEALTH",
+		icon: fullerton,
 		iconBg: "#E6DEDD",
-		date: "December 2024 - present",
+		date: "July 2021 - October 2021",
 		points: [
-			"As a passionate Full-Stack Developer, I specialize in building scalable and maintainable web applications using modern technologies. On the frontend, I create intuitive and performant UIs with React and TypeScript, while on the backend, I architect robust solutions using NestJS, PHP, and REST APIs.",
-			"I have a deep understanding of Hexagonal Architecture and Domain-Driven Design (DDD), ensuring that applications are modular, testable, and easy to maintain. My approach to software development prioritizes clean architecture, scalability, and best practices.",
-			"With experience in microservices and containerized deployments using Docker and Kubernetes, I focus on delivering high-availability and efficient cloud-native solutions. Additionally, I emphasize end-to-end (E2E) testing with in-house developed tools and unit testing, ensuring software reliability and high code quality.",
-			"Driven by innovation and continuous learning, I thrive on solving complex problems and delivering impactful software solutions.",
+			"Developing and maintaining web applications using React.js and other related technologies.",
+			"Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
+			"Implementing responsive design and ensuring cross-browser compatibility.",
+		],
+	},
+	{
+		title: "R&D Engineer",
+		company_name: "SolarBK",
+		icon: solarBk,
+		iconBg: "#E6DEDD",
+		date: "December 2019 - December 2020",
+		points: [
+			"Research and develop new trend of solar cell.",
+			"Optimize efficiency of current solar cell.",
+			"Receive feedbacks from clients and find the solution to fix these issues.",
+			"Deal with supplier to get the a good material for making a solar cell.",
 		],
 	},
 ];
 
 const educations = [
-	{
-		degree: "Bachelor of Science",
-		major: 'Materials Science (BSc)',
-		university: "HCMC University of Technology and Education",
-		icon: ute,
-		iconBg: "#E6DEDD",
-		date: "June 2016 - June 2020",
-		points: [
-			"Materials Analysis: Proficient in using various techniques for characterizing materials, including microscopy, spectroscopy, and mechanical testing.",
-			"Lab Techniques: Skilled in laboratory procedures, sample preparation, and experimental design.",
-			"Computer Skills: Familiarity with software for materials modeling and simulation. (Python, Matlab,...)",
-			"Materials Processing: Experienced in diverse processing methods such as casting, heat treatment, and additive manufacturing.",
-		],
-	},
+
 	{
 		degree: "Master of Science",
 		major: 'Materials Science (MSc)',
@@ -208,6 +195,20 @@ const educations = [
 			"Advanced Characterization: Extensive experience in utilizing cutting-edge techniques such as electron microscopy, X-ray diffraction, and spectroscopy for in-depth materials analysis.",
 			"Research Methodology: Well-versed in designing and conducting experiments, collecting and interpreting data, and contributing to the advancement of materials science knowledge.",
 			"Project Management: Demonstrated leadership and project management skills through the successful execution of complex research projects.",
+		],
+	},
+	{
+		degree: "Bachelor of Science",
+		major: 'Materials Science (BSc)',
+		university: "HCMC University of Technology and Education",
+		icon: ute,
+		iconBg: "#E6DEDD",
+		date: "June 2016 - June 2020",
+		points: [
+			"Materials Analysis: Proficient in using various techniques for characterizing materials, including microscopy, spectroscopy, and mechanical testing.",
+			"Lab Techniques: Skilled in laboratory procedures, sample preparation, and experimental design.",
+			"Computer Skills: Familiarity with software for materials modeling and simulation. (Python, Matlab,...)",
+			"Materials Processing: Experienced in diverse processing methods such as casting, heat treatment, and additive manufacturing.",
 		],
 	},
 ];
